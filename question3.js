@@ -12,6 +12,10 @@ function numberPyramid(linenum) //function definition
 
         for (let i = 1; i <= line ; i++) //innerloop1 
         {
+          while(printnum>=10)
+          {
+            printnum = printnum - 10;
+          }
            output = output + printnum ;
             printnum++;
         }
@@ -19,11 +23,16 @@ function numberPyramid(linenum) //function definition
           
         for (let i = 1; i < line; i++) //innerloop2
         {
-            output =output + printnum ;
+            while(printnum <0)
+            {
+              printnum=printnum +10; 
+            }
+          
+            output = output + printnum ;
             printnum--;
         }
           output = output + "\n" // for newline
     }
      console.log(output); //to print
 }
-numberPyramid(5); //functioncall
+numberPyramid(7); //functioncall
