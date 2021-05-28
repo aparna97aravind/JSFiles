@@ -43,3 +43,4 @@ function stack(size) // function stack with size argument passed.
 }    
 }  
 
+const stack1= new stack(20);

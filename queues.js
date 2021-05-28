@@ -58,3 +58,4 @@ function queue(size) // function queue with size argument passed.
     }    
 }
 
+const que1= new queue(20);
