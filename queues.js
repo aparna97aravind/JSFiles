@@ -1,7 +1,7 @@
 function queue(size) // function queue with size argument passed.
-{ 
+{
     this.size = size;
-    this.array = []; 
+    this.array = [];
     this.rear=0;
     this.front=0;
 
@@ -16,19 +16,17 @@ function queue(size) // function queue with size argument passed.
             {
                 console.log(this.array[i]);          //display array
             }
-                
         }
         else
         {
             if(this.front === 0 && this.rear === 0) // first insertion
-            { 
+            {
                 console.log("first Insertion !!");
                 this.array[this.rear] =item;        //element added 
                 console.log(`${item} is added to ${this.rear}th index`);
                 this.rear++;
                 this.front++;  //increment rear and front
                 return (`Rear =  ${this.rear-1}`);
-    
             }
             else
             {
@@ -38,9 +36,10 @@ function queue(size) // function queue with size argument passed.
                 return (`Rear=  ${this.rear-1}`);
             }
         }
-    }  
-                     
-   this.remove= function()     //dequeue
+    }
+
+
+    this.remove= function()     //dequeue
     {
         if(this.front-1 === this.rear) //isEmpty condition
         {
@@ -50,9 +49,8 @@ function queue(size) // function queue with size argument passed.
         {
             let removeElement= this.array[this.front-1];        // item removed stored in a variable and returned       
             console.log(`${removeElement} is removed from the Queue`);
-            this.front++;                        //Increment front to get next data    
+            this.front++;                        //Increment front to get next data
             return (`removed element ${removeElement} at position ${this.front-1}`);
         }
-    
-    }    
+    }
 }
