@@ -37,7 +37,7 @@ function queue(size)                                   // function queue with si
             let removeElement = array[front-1];        // item removed stored in a variable and returned
             array.splice[0,1];
             front++;                                   //Increment front to get next data
-            return (removeElement);
+            return (removeElement);                    // returning element 
         }
     }
     return Object.freeze({ add, remove });             //freezing object
