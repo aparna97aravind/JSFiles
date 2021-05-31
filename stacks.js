@@ -25,9 +25,9 @@ function stack(size)                                               // function s
         }
         else
         {
-            let removeElement = this.array[this.top-1];        // item removed stored in a variable and returned 
+            let removeElement = this.array[this.top-1];    // item removed stored in a variable and returned
+            this.array.splice(-1,1)
             this.top--;
-            this.array.slice(0,top);                                       //decrement top
         }
     }
 }
