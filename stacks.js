@@ -6,20 +6,14 @@ function stack(size)                                               // function s
 
     this.push = function(element)                                  //push function
     {
-        if(this.top  ===this.size || this.size < 0 )           //isFull condition
+        if(this.top  === this.size || this.size < 0 )           //isFull condition
         {
-            console.log("stack full!!! Cannot Insert elements. Your array is");
-            for(let i=0;i<this.size;i++)
-            {
-                console.log(this.array[i]);               //display array
-            }
+            console.log("Stack full!!! Cannot Insert elements");
         }
         else
         {
-            this.array[this.top] =element;                    //element added to the top
-            console.log(`${element} is added to ${this.top}th index`);
+            this.array[this.top] = element;                    //element added to the top
             this.top++;                                       //top++
-            return (`top of stack =  ${this.top-1}`);
         }
     }
 
@@ -27,14 +21,13 @@ function stack(size)                                               // function s
     {
         if(this.top === 0)                                  //isEmpty condition
         {
-            console.log("stack empty!!! Cannot Remove elements");            
+            console.log("stack empty!!! Cannot Remove elements");
         }
         else
         {
-            let removeElement= this.array[this.top-1];        // item removed stored in a variable and returned       
-            console.log(`${removeElement} is removed from the stack`);
-            this.top--;                                       //decrement top
-            return (`removed Element ${removeElement} from position ${this.top}`);
+            let removeElement = this.array[this.top-1];        // item removed stored in a variable and returned 
+            this.top--;
+            this.array.slice(0,top);                                       //decrement top
         }
     }
 }
