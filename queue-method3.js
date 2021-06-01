@@ -40,5 +40,5 @@ function queue(size)                                   // function queue with si
             return (removeElement);                    // returning element 
         }
     }
-    return Object.freeze({ add, remove });             //freezing object
+    return {add, remove};                              //wrapping multiple values and then returning as an object
 }
