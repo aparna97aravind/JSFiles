@@ -25,10 +25,10 @@ function stack(size)
         else
         {
             let removeElement = array[top-1];       // item removed stored in a variable and returned
-            array.splice(-1,1)
+            array.splice(-1,1);
             top--;
             return (removeElement);
         }
     }
-    return Object.freeze({ push, pop });
+    return {push, pop};                             //wrapping multiple values and then returning as an object
 }
